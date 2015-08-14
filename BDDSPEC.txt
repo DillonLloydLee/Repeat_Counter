@@ -1,7 +1,8 @@
 BDD SPEC:
 
-1.  Objective:          Search a single letter text for itself.
-                        As simple as it could be.
+1.  Objective:          Have a single letter text searching for
+                        itself return a positive output.
+                        I think this simple as it could be.
     Main text Input:    "a"
     Search Input:       "a"
     Output:             1
@@ -9,19 +10,27 @@ BDD SPEC:
 2.  Objective:          Search three words for instances of a
                         single letter.  These three words will
                         not contain additional instances of
-                        that letter.
+                        that letter nested inside other words,
+                        therefore the test should continue to
+                        work even as the function becomes more
+                        complex.
     Main text Input:    "a big dog"
     Search Input:       "a"
     Output:             1
 
 3.  Objective:          Find the letter whether it is capitalized
-                        or not.
+                        or not. Similar nesting rules from
+                        objective 2.  Paragraphs often have
+                        capitalized letters; this seems a simple
+                        next step that will need addressing.
     Main text Input:    "A big dog is a good dog."
     Search Input:       "a"
     Output:             2
 
 4.  Objective:          Ignore instances where the search is
-                        part of another word.
+                        part of another word, making this function
+                        a Word Repeat Counter rather than just
+                        a Letter Repeat Counter.
     Main text Input:    "The big dog named Theodore is the thief."
     Search Input:       "the"
     Output:             2
@@ -34,7 +43,12 @@ BDD SPEC:
     Output:             2
 
 6.  Objective:          Make sure the program can handle any type
-                        of search input without an error.
+                        of search input without an error.  I can't
+                        think why any search wouldn't function, but
+                        let's test some numbers and special
+                        characters to make sure our function doesn't
+                        break when users are trying to find
+                        something strange.
     Main text Input:    "666BATCH_ERROR~!!%: THE BIG DOG IS LOOSE!"
     Search Input:       "666BATCH_ERROR~!!%"
     Output:             1
