@@ -5,7 +5,7 @@
 
             $output = 0;
 
-            if ($text != "" || $search != ""){
+            if ($text != "" && $search != ""){
 
                 $search_stripped = str_replace(";", "", $search);
                 $search_stripped = str_replace(":", "", $search_stripped);
@@ -45,9 +45,12 @@
                     }
                 }
             }
-            else {
+            elseif ($search == "") {
                 $search = "NOTHING";
                 $output = "IMPOSSIBLE TO COMPUTE!";
+            }
+            else {
+                $output = "No text entered to search through.";
             }
 
             $output = array($search, $output);
