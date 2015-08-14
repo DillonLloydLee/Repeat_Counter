@@ -4,10 +4,11 @@
         function countRepeats($text, $search) {
 
             $output = 0;
-            $explode_text = str_split($text);
+            $search_word = strtolower($search);
+            $text_to_search = str_split(strtolower($text));
 
-            foreach ($explode_text as $possible_word) {
-                if ($possible_word == $search) {
+            foreach ($text_to_search as $possible_word) {
+                if ($possible_word == $search_word) {
                     $output += 1;
                 }
             }
