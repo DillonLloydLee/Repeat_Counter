@@ -27,6 +27,18 @@
             $this->assertEquals(1, $result);
         }
 
+        //Test Three: a capitalized letter.
+        function test_countRepeats_singleCapitalized() {
+
+            $test_RepeatCounter = new RepeatCounter;
+            $text = "A big dog is a good dog.";
+            $search = "a";
+
+            $result = $test_RepeatCounter->countRepeats($text, $search);
+
+            $this->assertEquals(2, $result);
+        }
+
 
     }
 ?>
