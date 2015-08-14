@@ -77,7 +77,7 @@
 
         // The colon is an issue.  Either it is stripped away, but the
         // space where the underscore was ruins the search, or it makes
-        // the "word" different from the search.
+        // the "word" different from the search.  FIXED!
 
         // Test Six and a half: a word with an apostrophe.
         function test_countRepeats_sixAndAHalf() {

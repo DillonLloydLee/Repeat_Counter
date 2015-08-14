@@ -9,5 +9,11 @@
         return $app['twig']->render('root.twig');
     });
 
+    $app->get('/results', function() use ($app) {
+        $this_RepeatCounter = new RepeatCounter;
+        $this_number = $this_RepeatCounter->countRepeats($_GET['word']);
+        return $app['twig']->render('results.twig', array("data" => $this_number));
+    });
+
     return $app;
  ?>
