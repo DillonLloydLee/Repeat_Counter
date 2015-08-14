@@ -1,25 +1,49 @@
 BDD SPEC:
 
-1.  Objective:
-    Input:
-    Output:
+1.  Objective:          Search a single letter text for itself.
+                        As simple as it could be.
+    Main text Input:    "a"
+    Search Input:       "a"
+    Output:             1
 
-2.  Objective:
-    Input:
-    Output:
+2.  Objective:          Search three words for instances of a
+                        single letter.  These three words will
+                        not contain additional instances of
+                        that letter.
+    Main text Input:    "a big dog"
+    Search Input:       "a"
+    Output:             1
 
-3.  Objective:
-    Input:
-    Output:
+3.  Objective:          Find the letter whether it is capitalized
+                        or not.
+    Main text Input:    "A big dog is a good dog."
+    Search Input:       "a"
+    Output:             2
 
-4.  Objective:
-    Input:
-    Output:
+4.  Objective:          Ignore instances where the search is
+                        part of another word.
+    Main text Input:    "The big dog named Theodore is the thief."
+    Search Input:       "the"
+    Output:             2
 
-5.  Objective:  
-    Input:
-    Output:
+5.  Objective:          Make sure the program still finds the
+                        search input if there is punctuation like
+                        periods or colons.
+    Main text Input:    "ERROR: THE BIG DOG IS LOOSE! ERROR!"
+    Search Input:       "ERROR"
+    Output:             2
 
-6.  Objective:
-    Input:
-    Output:
+6.  Objective:          Make sure the program can handle any type
+                        of search input without an error.
+    Main text Input:    "666BATCH_ERROR~!!%: THE BIG DOG IS LOOSE!"
+    Search Input:       "666BATCH_ERROR~!!%"
+    Output:             1
+
+7.  Objective:          Try searching something long and complex
+                        for multiple iterations of the word.
+                        This test should hopefully work without
+                        any further edits to the function.
+    Main text Input:    The first paragraph of J.R.R. Tolkien's The
+                        Hobbit
+    Search Input:       "HOLE"
+    Output:             6
