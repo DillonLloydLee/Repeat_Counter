@@ -60,4 +60,4 @@ BDD SPEC:
     Main text Input:    The first paragraph of J.R.R. Tolkien's The
                         Hobbit
     Search Input:       "HOLE"
-    Output:             6
+    Output:             3
