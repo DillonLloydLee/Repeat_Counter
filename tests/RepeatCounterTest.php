@@ -51,6 +51,18 @@
             $this->assertEquals(2, $result);
         }
 
+        //Test Five: ignore certain punctuation.
+        function test_countRepeats_five() {
+
+            $test_RepeatCounter = new RepeatCounter;
+            $text = "ERROR: THE BIG DOG IS LOOSE! ERROR!";
+            $search = "error";
+
+            $result = $test_RepeatCounter->countRepeats($text, $search);
+
+            $this->assertEquals(2, $result);
+        }
+
 
     }
 ?>

@@ -39,7 +39,7 @@ BDD SPEC:
                         search input if there is punctuation like
                         periods or colons.
     Main text Input:    "ERROR: THE BIG DOG IS LOOSE! ERROR!"
-    Search Input:       "ERROR"
+    Search Input:       "error"
     Output:             2
 
 6.  Objective:          Make sure the program can handle any type
