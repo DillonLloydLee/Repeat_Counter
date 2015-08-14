@@ -3,7 +3,7 @@
 
     class RepeatCounterTest extends PHPUnit_Framework_TestCase {
 
-        //Test One: a single letter in a single letter.
+        // Test One: a single letter in a single letter.
         function test_countRepeats_one() {
 
             $test_RepeatCounter = new RepeatCounter;
@@ -15,7 +15,7 @@
             $this->assertEquals(1, $result);
         }
 
-        //Test Two: a single letter amongst several letters.
+        // Test Two: a single letter amongst several letters.
         function test_countRepeats_two() {
 
             $test_RepeatCounter = new RepeatCounter;
@@ -27,7 +27,7 @@
             $this->assertEquals(1, $result);
         }
 
-        //Test Three: a capitalized letter.
+        // Test Three: a capitalized letter.
         function test_countRepeats_three() {
 
             $test_RepeatCounter = new RepeatCounter;
@@ -39,7 +39,7 @@
             $this->assertEquals(2, $result);
         }
 
-        //Test Four: ignore other word inclusion of search word.
+        // Test Four: ignore other word inclusion of search word.
         function test_countRepeats_four() {
 
             $test_RepeatCounter = new RepeatCounter;
@@ -51,7 +51,7 @@
             $this->assertEquals(2, $result);
         }
 
-        //Test Five: ignore certain punctuation.
+        // Test Five: ignore certain punctuation.
         function test_countRepeats_five() {
 
             $test_RepeatCounter = new RepeatCounter;
@@ -63,7 +63,7 @@
             $this->assertEquals(2, $result);
         }
 
-        //Test Six: still finds weird stuff.
+        // Test Six: still finds weird stuff.
         function test_countRepeats_six() {
 
             $test_RepeatCounter = new RepeatCounter;
@@ -75,7 +75,11 @@
             $this->assertEquals(1, $result);
         }
 
-        //Test Six and a half: a word with an apostrophe.
+        // The colon is the issue.  Either it is stripped away, but the
+        // space where the underscore was ruins the search, or it makes
+        // the "word" different from the search.
+
+        // Test Six and a half: a word with an apostrophe.
         function test_countRepeats_sixAndAHalf() {
 
             $test_RepeatCounter = new RepeatCounter;
