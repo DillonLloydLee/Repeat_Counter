@@ -1,0 +1,25 @@
+BDD SPEC:
+
+1.  Objective:
+    Input:
+    Output:
+
+2.  Objective:
+    Input:
+    Output:
+
+3.  Objective:
+    Input:
+    Output:
+
+4.  Objective:
+    Input:
+    Output:
+
+5.  Objective:  
+    Input:
+    Output:
+
+6.  Objective:
+    Input:
+    Output:
