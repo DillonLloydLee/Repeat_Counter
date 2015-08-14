@@ -63,6 +63,18 @@
             $this->assertEquals(2, $result);
         }
 
+        //Test Six: still finds weird stuff.
+        function test_countRepeats_six() {
+
+            $test_RepeatCounter = new RepeatCounter;
+            $text = "666BATCH_ERROR~!!%: THE BIG DOG IS LOOSE!";
+            $search = "666BATCH_ERROR~!!%";
+
+            $result = $test_RepeatCounter->countRepeats($text, $search);
+
+            $this->assertEquals(1, $result);
+        }
+
 
     }
 ?>
