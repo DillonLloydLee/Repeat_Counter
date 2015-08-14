@@ -43,6 +43,7 @@
                 }
             }
 
+            $output = array($search, $output);
             return $output;
 
         }
