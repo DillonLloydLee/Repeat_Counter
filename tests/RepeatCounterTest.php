@@ -75,6 +75,18 @@
             $this->assertEquals(1, $result);
         }
 
+        //Test Six and a half: a word with an apostrophe.
+        function test_countRepeats_sixAndAHalf() {
+
+            $test_RepeatCounter = new RepeatCounter;
+            $text = "I can't recite that cant.";
+            $search = "can't";
+
+            $result = $test_RepeatCounter->countRepeats($text, $search);
+
+            $this->assertEquals(1, $result);
+        }
+
 
     }
 ?>
